@@ -72,7 +72,7 @@ body {
 /* HERO SECTION */
 .container-hero {
     background: linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)), 
-                url('../Web-Pribadi/thisisengineering-TXxiFuQLBKQ-unsplash.jpg');
+                url('thisisengineering-TXxiFuQLBKQ-unsplash.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
