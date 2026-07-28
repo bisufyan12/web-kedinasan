@@ -1,0 +1,248 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Mencegah elemen bergeser akibat padding */
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #1a1a1a;
+    background-color: #fdfdfd;
+}
+
+/* NAVBAR */
+.container-navbar {
+    background-color: rgb(238, 236, 233);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    border-bottom: 1px solid #ccc;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar-judul h2 {
+    font-size: 20px;
+    color: rgb(9, 9, 67);
+}
+
+.navbar-judul h3 {
+    font-size: 13px;
+    font-weight: normal;
+    color: #555;
+}
+
+.navbar-list {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar-list a {
+    color: black;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 8px 12px;
+    transition: 0.3s;
+}
+
+.navbar-list a:hover {
+    color: rgb(9, 9, 67);
+    text-decoration: underline;
+    text-underline-offset: 8px;
+}
+
+.btn-sapa {
+    text-decoration: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    color: white;
+    background-color: rgb(9, 9, 67);
+    display: inline-block;
+    transition: 0.3s;
+}
+
+.btn-sapa:hover {
+    background-color: white;
+    border: 1px solid black;
+    color: black;
+}
+
+/* HERO SECTION */
+.container-hero {
+    background: linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)), 
+                url('../Web-Pribadi/thisisengineering-TXxiFuQLBKQ-unsplash.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 60px;
+}
+
+.hero-teks {
+    text-align: left;
+    color: rgb(9, 9, 67);
+    max-width: 800px;
+}
+
+.hero-teks h2 {
+    font-size: 38px;
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
+
+.hero-teks h3 {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.5;
+    margin-bottom: 25px;
+    color: #333;
+}
+
+.hero-cta button {
+    padding: 12px 24px;
+    margin-right: 15px;
+    background-color: rgb(9, 9, 67);
+    border: 1px solid rgb(9, 9, 67);
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.hero-cta button:hover {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+}
+
+/* IMPACT STATS */
+.container-impact {
+    background-color: rgb(238, 236, 233);
+    display: flex;
+    justify-content: space-around;
+    padding: 30px 40px;
+    margin-top: 20px;
+}
+
+.card-impact {
+    width: 22%;
+    background-color: white;
+    border-radius: 10px;
+    padding: 25px 15px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(9, 9, 67, 0.15);
+    transition: transform 0.3s ease;
+}
+
+.card-impact h3 {
+    font-size: 32px;
+    color: rgb(9, 9, 67);
+    margin-bottom: 5px;
+}
+
+.card-impact p {
+    font-size: 14px;
+    color: #555;
+}
+
+.card-impact:hover {
+    transform: translateY(-5px);
+}
+
+/* AGENDA SECTION */
+.container-impact2 {
+    margin-top: 20px;
+    background-color: rgb(238, 236, 233);
+    padding: 50px 40px;
+}
+
+.header h3 {
+    text-align: center;
+    font-size: 28px;
+    color: rgb(9, 9, 67);
+    margin-bottom: 30px;
+}
+
+.flex-agenda {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.agenda {
+    width: 23%;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(9, 9, 67, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.agenda img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.agenda .titi-mangsa {
+    font-size: 12px;
+    color: #777;
+    margin: 15px 15px 5px 15px;
+}
+
+.agenda h4 {
+    font-size: 16px;
+    color: rgb(9, 9, 67);
+    margin: 0 15px 10px 15px;
+}
+
+.agenda p {
+    font-size: 13px;
+    color: #444;
+    margin: 0 15px 15px 15px;
+    line-height: 1.4;
+}
+
+.agenda button {
+    margin: 0 15px;
+    padding: 8px 15px;
+    background-color: rgb(9, 9, 67);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    align-self: flex-start;
+    transition: 0.3s;
+}
+
+.agenda button:hover {
+    background-color: #333;
+}
+
+.agenda:hover {
+    transform: translateY(-5px);
+}
+
+/* FOOTER */
+.footer {
+    background-color: rgb(9, 9, 67);
+    color: white;
+    padding: 30px 40px;
+    text-align: center;
+}
+
+.footer p {
+    font-size: 13px;
+    margin-bottom: 5px;
+    opacity: 0.9;
+}
