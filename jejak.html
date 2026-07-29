@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jejak Pengabdian - Robby Sopyan, S.Pd., M.Pd</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Styling Khusus Halaman Arsip Jejak Pengabdian */
+        .page-header {
+            background-color: rgb(238, 236, 233);
+            padding: 40px 20px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .page-header h1 {
+            color: rgb(9, 9, 67);
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .page-header p {
+            color: #555;
+            font-size: 16px;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .container-jejak-full {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        /* Grid Kartu Agenda (Responsif: 3 Kolom di Desktop, 2 di Tablet, 1 di HP) */
+        .grid-agenda {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        /* Responsif Grid */
+        @media screen and (max-width: 992px) {
+            .grid-agenda {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media screen and (max-width: 576px) {
+            .grid-agenda {
+                grid-template-columns: 1fr;
+            }
+            .page-header h1 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <header class="container-navbar">
+        <div class="navbar-judul">
+            <h2>Robby Sopyan, S.Pd., M.Pd</h2>
+            <h3>Pendidik &amp; Penggerak Numerasi</h3>
+        </div>
+
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <nav class="navbar-list" id="nav-menu">
+            <a href="index.html">Beranda</a>
+            <a href="jejak.html" class="active">Jejak Pengabdian</a>
+            <a href="gagasan.html">Gagasan &amp; Solusi</a>
+            <a href="tentang.html">Tentang</a>
+            <a href="#kontak" class="btn-sapa btn-sapa-mobile">Sapa Warga</a>
+        </nav>
+
+        <div class="navbar-cta">
+            <a href="#kontak" class="btn-sapa">Sapa Warga</a>
+        </div>
+    </header>
+
+    <!-- Header Halaman Jejak Pengabdian -->
+    <section class="page-header">
+        <h1>Arsip Jejak Pengabdian</h1>
+        <p>Dokumentasi Laporan Kegiatan Kedinasan, Pendampingan Numerasi, dan Aktivitas Organisasi Pendidikan Secara Transparan dan Berkala.</p>
+    </section>
+
+    <!-- Konten Utam: Daftar Seluruh Agenda -->
+    <main class="container-jejak-full">
+        <div class="grid-agenda">
+
+            <!-- Agenda 1 (Terbaru) -->
+            <article class="agenda">
+                <img src="akt4.jpg" alt="Rakor MGMP Matematika">
+                <p class="titi-mangsa">Karawang, 29 Juli 2026</p>
+                <h4>Rapat Koordinasi Pengurus MGMP Matematika SMA Karawang</h4>
+                <p>Pembahasan workshop alat peraga dan strategi penguatan profesionalisme tata kelola finansial organisasi.</p>
+                <button onclick="window.location.href='rakor-mgmp.html'" class="btn-detail">Lihat Selengkapnya</button>
+            </article>
+
+            <!-- Agenda 2 -->
+            <article class="agenda">
+                <img src="mpls-1.jpg" alt="Pelaksanaan MPLS SMAN 2 Karawang">
+                <p class="titi-mangsa">Karawang, 21 Juli 2026</p>
+                <h4>MPLS Usai, Semangat KBM Dimulai</h4>
+                <p>Pelaksanaan MPLS SMAN 2 Karawang selama 5 hari mencakup pembinaan kedisiplinan Babinsa, Gapura Pancawaluya, dan pencegahan perundungan.</p>
+                <button onclick="window.location.href='mpls.html'" class="btn-detail">Lihat Selengkapnya</button>
+            </article>
+
+            <!-- Agenda 3 -->
+            <article class="agenda">
+                <img src="akt2.jpg" alt="Workshop Matematika SMAN 2 Karawang">
+                <p class="titi-mangsa">Karawang, 15 Juli 2026</p>
+                <h4>Workshop Matematika SMAN 2 Karawang</h4>
+                <p>Penyelarasan Alur Tujuan Pembelajaran dan pemetaan ulang materi kalkulus serta statistik persiapan TKA kelas XII.</p>
+                <button onclick="window.location.href='workshop-matematika.html'" class="btn-detail">Lihat Selengkapnya</button>
+            </article>
+
+            <!-- Agenda 4 -->
+            <article class="agenda">
+                <img src="akt3.jpg" alt="Kemitraan Unsika">
+                <p class="titi-mangsa">Karawang, 03 Juli 2026</p>
+                <h4>Kemitraan S2 Pendidikan Matematika Unsika</h4>
+                <p>Verifikasi lapangan mitra belajar dan penelitian antara Unsika, SMAN 2 Karawang, serta MGMP Matematika SMA Karawang.</p>
+                <button onclick="window.location.href='verifikasi-unsika.html'" class="btn-detail">Lihat Selengkapnya</button>
+            </article>
+
+            <!-- Tempat untuk menambahkan kegiatan lama selanjutnya (Agenda 5, 6, dst) -->
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 - Robby Sopyan, S.Pd., M.Pd. Hak Cipta Dilindungi.</p>
+    </footer>
+
+    <!-- JavaScript Toggle Hamburger Menu -->
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
