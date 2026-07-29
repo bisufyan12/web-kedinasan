@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Beranda - Robby Sopyan, S.Pd., M.Pd</title>
-    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -14,12 +14,23 @@
             <h2>Robby Sopyan, S.Pd., M.Pd</h2>
             <h3>Pendidik &amp; Penggerak Numerasi</h3>
         </div>
-        <nav class="navbar-list">
+
+        <!-- Tombol Hamburger (Baru) -->
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <nav class="navbar-list" id="nav-menu">
             <a href="#beranda">Beranda</a>
             <a href="#jejak">Jejak Pengabdian</a>
             <a href="#gagasan">Gagasan &amp; Solusi</a>
             <a href="#tentang">Tentang</a>
+            <!-- Tombol Sapa Warga dimasukkan ke dalam menu agar tampil rapi di HP -->
+            <a href="#kontak" class="btn-sapa btn-sapa-mobile">Sapa Warga</a>
         </nav>
+
         <div class="navbar-cta">
             <a href="#kontak" class="btn-sapa">Sapa Warga</a>
         </div>
@@ -102,5 +113,15 @@
         <p>&copy; 2026 - Robby Sopyan, S.Pd., M.Pd. Hak Cipta Dilindungi.</p>
     </footer>
 
+    <!-- JavaScript untuk Toggle Hamburger Menu -->
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
