@@ -37,7 +37,7 @@ body {
 .navbar-list {
     display: flex;
     gap: 20px;
-    margin-left: 30%;
+    margin-left: 10%;
 }
 
 .navbar-list a {
