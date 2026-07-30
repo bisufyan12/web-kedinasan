@@ -73,11 +73,12 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            transition: transform 0.3s ease;
+            transition: all 0.3s ease;
         }
 
-        .card-gagasan:hover {
-            transform: translateY(-5px);
+        /* Animasi saat kartu disembunyikan/ditampilkan */
+        .card-gagasan.hide {
+            display: none !important;
         }
 
         .card-img-box {
@@ -177,11 +178,11 @@
             <a href="jejak.html">Jejak Pengabdian</a>
             <a href="gagasan.html" class="active">Gagasan &amp; Solusi</a>
             <a href="tentang.html">Tentang</a>
-            <a href="#kontak" class="btn-sapa btn-sapa-mobile">Warga Menyapa</a>
+            <a href="#kontak" class="btn-sapa btn-sapa-mobile">Sapa Warga</a>
         </nav>
 
         <div class="navbar-cta">
-            <a href="#kontak" class="btn-sapa">Warga Menyapa</a>
+            <a href="#kontak" class="btn-sapa">Sapa Warga</a>
         </div>
     </header>
 
@@ -194,20 +195,20 @@
     <!-- Konten Utama -->
     <main class="container-gagasan">
 
-        <!-- Tombol Filter Kategori (Pengunjung bisa menyaring tulisan) -->
+        <!-- Tombol Filter dengan atribut data-filter -->
         <div class="filter-container">
-            <button class="btn-filter active">Semua Tulisan</button>
-            <button class="btn-filter">Opini Pendidikan</button>
-            <button class="btn-filter">Riset &amp; Akademis</button>
-            <button class="btn-filter">Refleksi Guru</button>
-            <button class="btn-filter">Kemasyarakatan</button>
+            <button class="btn-filter active" data-filter="all">Semua Tulisan</button>
+            <button class="btn-filter" data-filter="opini">Opini Pendidikan</button>
+            <button class="btn-filter" data-filter="riset">Riset &amp; Akademis</button>
+            <button class="btn-filter" data-filter="refleksi">Refleksi Guru</button>
+            <button class="btn-filter" data-filter="kemasyarakatan">Kemasyarakatan</button>
         </div>
 
-        <!-- Grid Kartu Artikel -->
+        <!-- Grid Kartu Artikel dengan atribut data-category -->
         <div class="grid-gagasan">
 
-            <!-- Artikel 1 -->
-            <article class="card-gagasan">
+            <!-- Artikel 1: Kategori Opini -->
+            <article class="card-gagasan" data-category="opini">
                 <div class="card-img-box">
                     <span class="badge-kategori">Opini Pendidikan</span>
                     <img src="art-1.jpg" alt="Menjawab Tantangan TKA">
@@ -220,8 +221,8 @@
                 </div>
             </article>
 
-            <!-- Artikel 2 -->
-            <article class="card-gagasan">
+            <!-- Artikel 2: Kategori Riset -->
+            <article class="card-gagasan" data-category="riset">
                 <div class="card-img-box">
                     <span class="badge-kategori" style="background: #27ae60;">Riset &amp; Akademis</span>
                     <img src="art-2.jpg" alt="Optimalisasi Riset Kolaboratif">
@@ -234,10 +235,10 @@
                 </div>
             </article>
 
-            <!-- Artikel 3 -->
-            <article class="card-gagasan">
+            <!-- Artikel 3: Kategori Kemasyarakatan -->
+            <article class="card-gagasan" data-category="kemasyarakatan">
                 <div class="card-img-box">
-                    <span class="badge-kategori" style="background: #e67e22;">Kepemudaan</span>
+                    <span class="badge-kategori" style="background: #e67e22;">Kemasyarakatan</span>
                     <img src="art-3.jpg" alt="Pemberdayaan Karang Taruna">
                 </div>
                 <div class="card-content">
@@ -253,17 +254,45 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <p>&copy; 2026 - Robby Sopyan, S.Pd., M.Pd. // Hak Cipta Dilindungi.</p>
+        <p>&copy; 2026 - Robby Sopyan, S.Pd., M.Pd. Hak Cipta Dilindungi.</p>
     </footer>
 
-    <!-- JavaScript Toggle Hamburger -->
+    <!-- Script JavaScript Filter Interaktif -->
     <script>
+        // Toggle Hamburger Menu
         const hamburger = document.getElementById('hamburger');
         const navMenu = document.getElementById('nav-menu');
 
-        hamburger.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-            hamburger.classList.toggle('active');
+        if(hamburger) {
+            hamburger.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+                hamburger.classList.toggle('active');
+            });
+        }
+
+        // Logic Filter Kategori Interaktif
+        const filterBtns = document.querySelectorAll('.btn-filter');
+        const cards = document.querySelectorAll('.card-gagasan');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // 1. Ubah status tombol aktif
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                // 2. Filter Kartu Artikel
+                const filterValue = btn.getAttribute('data-filter');
+
+                cards.forEach(card => {
+                    const category = card.getAttribute('data-category');
+
+                    if (filterValue === 'all' || filterValue === category) {
+                        card.classList.remove('hide');
+                    } else {
+                        card.classList.add('hide');
+                    }
+                });
+            });
         });
     </script>
 </body>
