@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tentang Saya - Robby Sopyan, S.Pd., M.Pd</title>
+    <link rel="stylesheet" href="style2.css">
+    <style>
+        /* Styling Khusus Halaman Tentang Saya */
+        .page-header {
+            background-color: rgb(238, 236, 233);
+            padding: 40px 20px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .page-header h1 {
+            color: rgb(9, 9, 67);
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .page-header p {
+            color: #555;
+            font-size: 16px;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .container-tentang {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        /* Hero Profil Section */
+        .profil-hero {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            background: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            margin-bottom: 40px;
+        }
+
+        .profil-img-box {
+            flex: 1;
+            max-width: 300px;
+            text-align: center;
+        }
+
+        .profil-img-box img {
+            width: 100%;
+            border-radius: 12px;
+            object-fit: cover;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .profil-text {
+            flex: 2;
+        }
+
+        .profil-text h2 {
+            color: rgb(9, 9, 67);
+            font-size: 26px;
+            margin-bottom: 5px;
+        }
+
+        .profil-text .jabatan {
+            color: #f39c12;
+            font-weight: bold;
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+
+        .profil-text p {
+            font-size: 15px;
+            line-height: 1.8;
+            color: #444;
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        /* Quote Section */
+        .quote-box {
+            background: rgb(9, 9, 67);
+            color: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .quote-box blockquote {
+            font-size: 18px;
+            font-style: italic;
+            margin: 0 0 10px 0;
+            line-height: 1.6;
+        }
+
+        .quote-box cite {
+            font-size: 14px;
+            color: #f39c12;
+            font-style: normal;
+            font-weight: bold;
+        }
+
+        /* Grid Dua Pilar Pengabdian */
+        .section-title {
+            text-align: center;
+            color: rgb(9, 9, 67);
+            font-size: 24px;
+            margin-bottom: 30px;
+        }
+
+        .pilar-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .pilar-card {
+            background: #fff;
+            border-top: 4px solid rgb(9, 9, 67);
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .pilar-card.katar {
+            border-top-color: #f39c12;
+        }
+
+        .pilar-card h3 {
+            color: rgb(9, 9, 67);
+            font-size: 20px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .pilar-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .pilar-list li {
+            font-size: 14px;
+            line-height: 1.7;
+            color: #555;
+            margin-bottom: 12px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .pilar-list li::before {
+            content: "✔";
+            position: absolute;
+            left: 0;
+            color: #f39c12;
+            font-weight: bold;
+        }
+
+        /* Timeline Riwayat Pendidikan */
+        .education-section {
+            background: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            margin-bottom: 40px;
+        }
+
+        .timeline {
+            border-left: 3px solid rgb(9, 9, 67);
+            padding-left: 20px;
+            margin-left: 10px;
+        }
+
+        .timeline-item {
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .timeline-item::before {
+            content: "";
+            width: 12px;
+            height: 12px;
+            background: #f39c12;
+            border-radius: 50%;
+            position: absolute;
+            left: -28px;
+            top: 5px;
+        }
+
+        .timeline-item h4 {
+            color: rgb(9, 9, 67);
+            margin: 0 0 5px 0;
+            font-size: 16px;
+        }
+
+        .timeline-item p {
+            margin: 0;
+            color: #666;
+            font-size: 14px;
+        }
+
+        /* Responsif Layar */
+        @media screen and (max-width: 768px) {
+            .profil-hero {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .profil-text p {
+                text-align: left;
+            }
+
+            .pilar-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <header class="container-navbar">
+        <div class="navbar-judul">
+            <h2>Robby Sopyan, S.Pd., M.Pd</h2>
+            <h3>Pendidik &amp; Penggerak Numerasi</h3>
+        </div>
+
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <nav class="navbar-list" id="nav-menu">
+            <a href="index.html">Beranda</a>
+            <a href="jejak.html">Jejak Pengabdian</a>
+            <a href="gagasan.html">Gagasan &amp; Solusi</a>
+            <a href="tentang.html" class="active">Tentang</a>
+            <a href="#kontak" class="btn-sapa btn-sapa-mobile">Warga Menyapa</a>
+        </nav>
+
+        <div class="navbar-cta">
+            <a href="#kontak" class="btn-sapa">Warga Menyapa</a>
+        </div>
+    </header>
+
+    <!-- Header Halaman -->
+    <section class="page-header">
+        <h1>Profil &amp; Dedikasi</h1>
+        <p>Mengenal Lebih Dekat Kiprah Pendidik, Pengurus Organisasi Kedinasan, serta Aktivis Kemasyarakatan di Kabupaten Karawang.</p>
+    </section>
+
+    <!-- Konten Utama -->
+    <main class="container-tentang">
+
+        <!-- Section 1: Hero Profil Singkat -->
+        <section class="profil-hero">
+            <div class="profil-img-box">
+                <!-- Gunakan Foto Kedinasan / Formal Pak Robby -->
+                <img src="foto-profil.jpg" alt="Robby Sopyan, S.Pd., M.Pd">
+            </div>
+            <div class="profil-text">
+                <h2>Robby Sopyan, S.Pd., M.Pd</h2>
+                <p class="jabatan">Guru Matematika SMAN 2 Karawang | Sekretaris MGMP Matematika SMA Kab. Karawang</p>
+                <p>
+                    Sebagai seorang pendidik, saya percaya bahwa matematika bukan sekadar deretan angka dan rumus di atas kertas, melainkan sebuah alat sains berpikir kritis untuk menyelesaikan berbagai persoalan nyata di tengah masyarakat.
+                </p>
+                <p>
+                    Selain mendedikasikan diri dalam dunia pendidikan formal dan perumusan kebijakan pembelajaran di sekolah, saya aktif menjalin sinergi dalam ranah sosio-kemasyarakatan serta gerakan pemuda Karang Taruna untuk membangun generasi muda yang berkarakter, mandiri, dan berdaya saing.
+                </p>
+            </div>
+        </section>
+
+        <!-- Section 2: Prinsip / Quote -->
+        <section class="quote-box">
+            <caption>
+                <blockquote>
+                    "Mengabdi dengan ilmu di ruang kelas, bergerak bersama masyarakat di lingkungan warga. Pendidikan dan pemberdayaan pemuda adalah kunci utama kemajuan daerah."
+                </blockquote>
+                <cite>— Robby Sopyan, S.Pd., M.Pd</cite>
+            </caption>
+        </section>
+
+        <h2 class="section-title">Dua Pilar Kiprah &amp; Pengabdian</h2>
+
+        <!-- Section 3: Grid 2 Pilar Pengabdian -->
+        <section class="pilar-grid">
+            
+            <!-- Pilar 1: Akademik & Kedinasan -->
+            <div class="pilar-card">
+                <h3>📘 Pendidikan &amp; Kedinasan</h3>
+                <ul class="pilar-list">
+                    <li><strong>Pendidik Aktif SMAN 2 Karawang:</strong> Mengampu mata pelajaran Matematika dengan fokus pengembangan literasi numerasi berbasis pemecahan masalah kontekstual.</li>
+                    <li><strong>Sekretaris MGMP Matematika SMA Kab. Karawang:</strong> Berperan aktif dalam perencanaan workshop peningkatan kompetensi guru, pengembangan alat peraga, dan penyelarasan kurikulum daerah.</li>
+                    <li><strong>Mitra Riset Akademis:</strong> Berkolaborasi secara berkala dengan Perguruan Tinggi (termasuk S2 Pendidikan Matematika Unsika) dalam pengembangan penelitian tindakan kelas dan verifikasi mutu pembelajaran.</li>
+                </ul>
+            </div>
+
+            <!-- Pilar 2: Sosio-Kemasyarakatan / Katar -->
+            <div class="pilar-card katar">
+                <h3>🤝 Kepemudaan &amp; Kemasyarakatan</h3>
+                <ul class="pilar-list">
+                    <li><strong>Penggerak Karang Taruna (Katar):</strong> Aktif mengawal program-program pemberdayaan pemuda, pembinaan potensi lokal, serta giat sosial di tengah lingkungan masyarakat.</li>
+                    <li><strong>Jembatan Aspirasi Warga:</strong> Membuka ruang dialog dan komunikasi (Sapa Warga) guna menyerap aspirasi sosial, pendidikan, serta kegiatan kepemudaan secara inklusif.</li>
+                    <li><strong>Inisiator Kegiatan Kreatif Sosio-Pendidikan:</strong> Mendorong peran aktif pemuda dalam menciptakan iklim lingkungan yang kondusif, edukatif, dan tanggap terhadap isu-isu sosial.</li>
+                </ul>
+            </div>
+
+        </section>
+
+        <!-- Section 4: Riwayat Pendidikan Formal -->
+        <section class="education-section">
+            <h3 style="color: rgb(9, 9, 67); margin-bottom: 20px;">🎓 Riwayat Pendidikan Formal</h3>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h4>Magister Pendidikan Matematika (S2)</h4>
+                    <p>Universitas Singaperbangsa Karawang (UNSIKA)</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>Sarjana Pendidikan Matematika (S1)</h4>
+                    <p>Perguruan Tinggi / Universitas</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 - Robby Sopyan, S.Pd., M.Pd. Hak Cipta Dilindungi.</p>
+    </footer>
+
+    <!-- JavaScript Toggle Hamburger Menu -->
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
