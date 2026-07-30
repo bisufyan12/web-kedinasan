@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gagasan &amp; Solusi - Robby Sopyan, S.Pd., M.Pd</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .page-header {
+            background-color: rgb(238, 236, 233);
+            padding: 40px 20px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .page-header h1 {
+            color: rgb(9, 9, 67);
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .page-header p {
+            color: #555;
+            font-size: 16px;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .container-gagasan {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        /* Filter Kategori Button */
+        .filter-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 35px;
+            flex-wrap: wrap;
+        }
+
+        .btn-filter {
+            background: #fff;
+            border: 1px solid rgb(9, 9, 67);
+            color: rgb(9, 9, 67);
+            padding: 8px 18px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .btn-filter.active, .btn-filter:hover {
+            background: rgb(9, 9, 67);
+            color: #fff;
+        }
+
+        /* Grid Kartu Gagasan */
+        .grid-gagasan {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card-gagasan {
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.3s ease;
+        }
+
+        .card-gagasan:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-img-box {
+            position: relative;
+            height: 200px;
+        }
+
+        .card-img-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .badge-kategori {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: #f39c12;
+            color: #fff;
+            padding: 4px 12px;
+            font-size: 12px;
+            font-weight: bold;
+            border-radius: 4px;
+            text-transform: uppercase;
+        }
+
+        .card-content {
+            padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-tanggal {
+            font-size: 13px;
+            color: #888;
+            margin-bottom: 8px;
+        }
+
+        .card-title {
+            color: rgb(9, 9, 67);
+            font-size: 18px;
+            margin-bottom: 10px;
+            line-height: 1.4;
+        }
+
+        .card-snippet {
+            font-size: 14px;
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+
+        .btn-baca {
+            background: rgb(9, 9, 67);
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+            width: 100%;
+            text-align: center;
+            text-decoration: none;
+            display: block;
+        }
+
+        .btn-baca:hover {
+            background: #f39c12;
+        }
+
+        @media screen and (max-width: 576px) {
+            .grid-gagasan {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <header class="container-navbar">
+        <div class="navbar-judul">
+            <h2>Robby Sopyan, S.Pd., M.Pd</h2>
+            <h3>Pendidik &amp; Penggerak Numerasi</h3>
+        </div>
+
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <nav class="navbar-list" id="nav-menu">
+            <a href="index.html">Beranda</a>
+            <a href="jejak.html">Jejak Pengabdian</a>
+            <a href="gagasan.html" class="active">Gagasan &amp; Solusi</a>
+            <a href="tentang.html">Tentang</a>
+            <a href="#kontak" class="btn-sapa btn-sapa-mobile">Warga Menyapa</a>
+        </nav>
+
+        <div class="navbar-cta">
+            <a href="#kontak" class="btn-sapa">Warga Menyapa</a>
+        </div>
+    </header>
+
+    <!-- Header Halaman -->
+    <section class="page-header">
+        <h1>Gagasan &amp; Solusi</h1>
+        <p>Himpunan Opini Pendidikan, Refleksi Pembelajaran, Hasil Riset Akademis, serta Sumbangsih Pemikiran untuk Kemajuan Karawang.</p>
+    </section>
+
+    <!-- Konten Utama -->
+    <main class="container-gagasan">
+
+        <!-- Tombol Filter Kategori (Pengunjung bisa menyaring tulisan) -->
+        <div class="filter-container">
+            <button class="btn-filter active">Semua Tulisan</button>
+            <button class="btn-filter">Opini Pendidikan</button>
+            <button class="btn-filter">Riset &amp; Akademis</button>
+            <button class="btn-filter">Refleksi Guru</button>
+            <button class="btn-filter">Kemasyarakatan</button>
+        </div>
+
+        <!-- Grid Kartu Artikel -->
+        <div class="grid-gagasan">
+
+            <!-- Artikel 1 -->
+            <article class="card-gagasan">
+                <div class="card-img-box">
+                    <span class="badge-kategori">Opini Pendidikan</span>
+                    <img src="art-1.jpg" alt="Menjawab Tantangan TKA">
+                </div>
+                <div class="card-content">
+                    <p class="card-tanggal">12 Juli 2026</p>
+                    <h3 class="card-title">Menjawab Tantangan TKA: Reorientasi Pembelajaran Matematika di SMA</h3>
+                    <p class="card-snippet">Persiapan Tes Kemampuan Akademik memerlukan perubahan paradigma dari sekadar menghafal rumus menuju penalaran mendalam dan pemecahan masalah kontekstual...</p>
+                    <a href="artikel-tka.html" class="btn-baca">Baca Selengkapnya &rarr;</a>
+                </div>
+            </article>
+
+            <!-- Artikel 2 -->
+            <article class="card-gagasan">
+                <div class="card-img-box">
+                    <span class="badge-kategori" style="background: #27ae60;">Riset &amp; Akademis</span>
+                    <img src="art-2.jpg" alt="Optimalisasi Riset Kolaboratif">
+                </div>
+                <div class="card-content">
+                    <p class="card-tanggal">28 Juni 2026</p>
+                    <h3 class="card-title">Sinergi Perguruan Tinggi dan Sekolah: Bridge-Building Riset Matematika</h3>
+                    <p class="card-snippet">Catatan hasil evaluasi verifikasi lapangan kemitraan S2 Pendidikan Matematika Unsika dan MGMP dalam menjembatani riset teoritis ke ruang kelas...</p>
+                    <a href="artikel-riset-unsika.html" class="btn-baca">Baca Selengkapnya &rarr;</a>
+                </div>
+            </article>
+
+            <!-- Artikel 3 -->
+            <article class="card-gagasan">
+                <div class="card-img-box">
+                    <span class="badge-kategori" style="background: #e67e22;">Kepemudaan</span>
+                    <img src="art-3.jpg" alt="Pemberdayaan Karang Taruna">
+                </div>
+                <div class="card-content">
+                    <p class="card-tanggal">15 Mei 2026</p>
+                    <h3 class="card-title">Karang Taruna dan Kemandirian Organisasi: Dari Wacana Menuju Aksi</h3>
+                    <p class="card-snippet">Pentingnya tata kelola finansial yang profesional dan kemitraan strategis dalam mendorong peran aktif kepemudaan di era digital...</p>
+                    <a href="artikel-katar.html" class="btn-baca">Baca Selengkapnya &rarr;</a>
+                </div>
+            </article>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 - Robby Sopyan, S.Pd., M.Pd. // Hak Cipta Dilindungi.</p>
+    </footer>
+
+    <!-- JavaScript Toggle Hamburger -->
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
