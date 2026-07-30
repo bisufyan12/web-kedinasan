@@ -6,56 +6,71 @@
     <title>Jejak Pengabdian - Robby Sopyan, S.Pd., M.Pd</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        /* Styling Khusus Halaman Arsip Jejak Pengabdian */
-        .page-header {
-            background-color: rgb(238, 236, 233);
-            padding: 40px 20px;
-            text-align: center;
-            border-bottom: 1px solid #ddd;
-        }
+    /* Styling Khusus Halaman Arsip Jejak Pengabdian */
+    .page-header {
+        background-color: rgb(238, 236, 233);
+        padding: 40px 20px;
+        text-align: center;
+        border-bottom: 1px solid #ddd;
+    }
 
-        .page-header h1 {
-            color: rgb(9, 9, 67);
-            font-size: 32px;
-            margin-bottom: 10px;
-        }
+    .page-header h1 {
+        color: rgb(9, 9, 67);
+        font-size: 32px;
+        margin-bottom: 10px;
+    }
 
-        .page-header p {
-            color: #555;
-            font-size: 16px;
-            max-width: 700px;
-            margin: 0 auto;
-        }
+    .page-header p {
+        color: #555;
+        font-size: 16px;
+        max-width: 700px;
+        margin: 0 auto;
+    }
 
-        .container-jejak-full {
-            max-width: 1200px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
+    .container-jejak-full {
+        max-width: 1200px;
+        margin: 40px auto;
+        padding: 0 20px;
+    }
 
-        /* Grid Kartu Agenda (Responsif: 3 Kolom di Desktop, 2 di Tablet, 1 di HP) */
+    /* FIX: Grid Otomatis Rapi dan Tidak Berjauhan */
+    .grid-agenda {
+        display: grid;
+        /* Membagi kolom secara fleksibel dengan lebar kartu minimal 300px */
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+        justify-content: center;
+    }
+
+    /* FIX: Memaksa Kartu Memenuhi Area Kolomnya */
+    .grid-agenda .agenda {
+        width: 100% !important; /* Paksa kartu memenuhi 100% lebar kolom grid */
+        max-width: none !important;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    /* Penyesuaian Foto agar Proporsional di Laptop/Tablet */
+    .grid-agenda .agenda img {
+        width: 100%;
+        height: 220px; /* Tinggi gambar dibuat konsisten lanskap */
+        object-fit: cover;
+        border-radius: 8px 8px 0 0;
+    }
+
+    /* Responsif untuk Layar HP */
+    @media screen and (max-width: 576px) {
         .grid-agenda {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
+            grid-template-columns: 1fr;
+            gap: 20px;
         }
-
-        /* Responsif Grid */
-        @media screen and (max-width: 992px) {
-            .grid-agenda {
-                grid-template-columns: repeat(2, 1fr);
-            }
+        .page-header h1 {
+            font-size: 24px;
         }
-
-        @media screen and (max-width: 576px) {
-            .grid-agenda {
-                grid-template-columns: 1fr;
-            }
-            .page-header h1 {
-                font-size: 24px;
-            }
-        }
-    </style>
+    }
+</style>
 </head>
 <body>
 
