@@ -3,6 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Biar kebaca di WA/share link -->
+    <meta property="og:title" content="Kisah Rama: Siswa SMA yang Kehilangan Orang Tuanya Sejak Usia 2 Bulan - Robby Sopyan" />
+    <meta property="og:description" content="Di balik sosok seorang remaja di ruang kelas, sering kali ada cerita perjuangan hidup yang tak pernah kita bayangkan. Sebuah kisah tentang Rama..." />
+    <!-- Alamat Lengkap Gambar (Wajib Pakai URL Lengkap/Absolut) -->
+    <meta property="og:image" content="https://robbysopyan.my.id/ilustrasi-rama.jpg" />
+    <meta property="og:url" content="https://robbysopyan.my.id/rama.html" />
+    <meta property="og:type" content="article" />
     <title>Kisah Rama: Siswa SMA yang Kehilangan Orang Tuanya Sejak Usia 2 Bulan - Robby Sopyan</title>
     <link rel="stylesheet" href="style.css">
     <style>
@@ -71,7 +78,24 @@
             margin-bottom: 30px;
             box-shadow: 0 4px 12px rgba(0,0,0,0.08);
         }
+        /* Wrapper Foto & Caption */
+        .article-featured-wrapper {
+            margin: 0 0 30px 0; /* Memberi jarak ke paragraf bawah */
+            padding: 0;
+        }
 
+        .article-featured-wrapper .article-featured-img {
+            margin-bottom: 8px; /* Jarak antara foto dan tulisan caption */
+        }
+
+        /* Style untuk Keterangan Foto (Caption) */
+        .image-caption {
+            font-size: 13px;
+            color: #777; /* Warna abu-abu elegan */
+            text-align: center; /* Posisikan tulisan di tengah */
+            font-style: italic; /* Tulisan miring */
+        }
+        
         /* Isi Artikel Utama */
         .article-body {
             font-size: 17px;
@@ -194,8 +218,11 @@
             Di balik sosok seorang remaja di ruang kelas, sering kali ada cerita perjuangan hidup yang tak pernah kita bayangkan. Sebuah kisah tentang Rama, anak yang harus melangkah dalam kesendirian, berteman keterbatasan, dan belajar dewasa jauh sebelum waktunya.
         </div>
 
-        <!-- Featured Image -->
-        <img src="ilustrasi-rama.jpg" alt="Kisah Rama Perjuangan Siswa SMA" class="article-featured-img">
+        <!-- Featured Image dengan Keterangan -->
+        <figure class="article-featured-wrapper">
+            <img src="ilustrasi-rama.jpg"" alt="Kisah Rama Perjuangan Siswa SMA" class="article-featured-img">
+            <figcaption class="image-caption">Foto: Ilustrasi</figcaption>
+        </figure>
 
         <!-- Body Content -->
         <article class="article-body">
