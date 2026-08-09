@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menjadi Guru Adaptif dan Mandiri: Pelajaran dari Film Buya Hamka dan Sang Kyai - Robby Sopyan</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Styling Khusus Artikel Akademis & Opini */
+        .article-container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .article-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .article-category {
+            display: inline-block;
+            background: #f39c12;
+            color: #fff;
+            padding: 4px 14px;
+            font-size: 12px;
+            font-weight: bold;
+            border-radius: 20px;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+
+        .article-title {
+            color: rgb(9, 9, 67);
+            font-size: 32px;
+            line-height: 1.3;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .article-meta {
+            font-size: 14px;
+            color: #666;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            border-top: 1px solid #eee;
+            border-bottom: 1px solid #eee;
+            padding: 10px 0;
+            margin-bottom: 30px;
+        }
+
+        /* Abstract / Ringkasan Eksekutif */
+        .article-abstract {
+            background-color: rgb(238, 236, 233);
+            border-left: 4px solid rgb(9, 9, 67);
+            padding: 20px;
+            border-radius: 0 8px 8px 0;
+            font-style: italic;
+            font-size: 15px;
+            color: #333;
+            line-height: 1.7;
+            margin-bottom: 30px;
+        }
+
+        /* Wrapper Foto & Caption */
+        .article-featured-wrapper {
+            margin: 0 0 30px 0;
+            padding: 0;
+        }
+
+        .article-featured-img {
+            width: 100%;
+            max-height: 420px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        .image-caption {
+            font-size: 13px;
+            color: #777;
+            text-align: center;
+            font-style: italic;
+        }
+
+        /* Isi Artikel Utama */
+        .article-body {
+            font-size: 17px;
+            line-height: 1.8;
+            color: #2c3e50;
+            text-align: justify;
+        }
+
+        .article-body p {
+            margin-bottom: 22px;
+        }
+
+        .article-body h3 {
+            color: rgb(9, 9, 67);
+            font-size: 22px;
+            margin: 35px 0 15px 0;
+            border-bottom: 2px solid #f39c12;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        /* Highlight Quote Akademis */
+        .academic-quote {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-left: 5px solid #f39c12;
+            padding: 20px 25px;
+            margin: 30px 0;
+            border-radius: 4px;
+        }
+
+        .academic-quote p {
+            font-size: 18px;
+            font-weight: 600;
+            color: rgb(9, 9, 67);
+            margin-bottom: 5px;
+            font-style: italic;
+        }
+
+        /* Footer & Navigasi Kembali */
+        .article-footer {
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .btn-kembali {
+            display: inline-block;
+            background: rgb(9, 9, 67);
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+
+        .btn-kembali:hover {
+            background: #f39c12;
+        }
+
+        @media screen and (max-width: 576px) {
+            .article-title {
+                font-size: 24px;
+            }
+            .article-meta {
+                flex-direction: column;
+                gap: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <header class="container-navbar">
+        <div class="navbar-judul">
+            <h2>Robby Sopyan</h2>
+            <h3>Pendidik &amp; Pegiat Numerasi</h3>
+        </div>
+
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <nav class="navbar-list" id="nav-menu">
+            <a href="index.html">Beranda</a>
+            <a href="jejak.html">Jejak Pengabdian</a>
+            <a href="gagasan.html" class="active">Gagasan &amp; Solusi</a>
+            <a href="tentang.html">Tentang</a>
+            <a href="#kontak" class="btn-sapa btn-sapa-mobile">Warga Menyapa</a>
+        </nav>
+
+        <div class="navbar-cta">
+            <a href="#kontak" class="btn-sapa">Warga Menyapa</a>
+        </div>
+    </header>
+
+    <!-- Main Article Layout -->
+    <main class="article-container">
+        
+        <header class="article-header">
+            <span class="article-category">Refleksi Guru</span>
+            <h1 class="article-title">Menjadi Guru Adaptif dan Mandiri: Pelajaran dari Film Buya Hamka dan Sang Kyai</h1>
+            
+            <div class="article-meta">
+                <span>✍️ Oleh: <strong>Robby Sopyan, S.Pd., M.Pd</strong></span>
+                <span>📅 9 Agustus 2026</span>
+                <span>⏱️ Waktu Baca: 3 Menit</span>
+            </div>
+        </header>
+
+        <!-- Abstract / Summary -->
+        <div class="article-abstract">
+            Laju pesat era digital dan kecerdasan buatan menuntut reorientasi peran pendidik di ruang kelas. Melalui rekaman sejarah yang divisualisasikan dalam film 'Sang Kyai' dan 'Buya Hamka', tulisan ini merefleksikan pentingnya sikap adaptif terhadap perkembangan zaman serta kemandirian filosofis yang harus dimiliki oleh seorang guru.
+        </div>
+
+        <!-- Featured Image dengan Keterangan -->
+        <figure class="article-featured-wrapper">
+            <img src="art-3.jpg" alt="Pelajaran dari Film Buya Hamka dan Sang Kyai" class="article-featured-img">
+            <figcaption class="image-caption">Foto: Ilustrasi</figcaption>
+        </figure>
+
+        <!-- Body Content -->
+        <article class="article-body">
+            <p>
+                Di era digital dan kecerdasan buatan (<em>Artificial Intelligence</em>) saat ini, peran manusia perlahan mulai tergeser. Di dunia industri, hampir seluruh mesin produksi dikendalikan oleh otomatisasi robotik. Di sektor ekonomi, pasar tempat bertemunya penjual dan pembeli kini hadir secara praktis dalam genggaman. Begitu pula di dunia pendidikan, sumber pengetahuan dan keahlian kini dapat diakses dengan sangat mudah melalui bantuan teknologi AI.
+            </p>
+
+            <p>
+                Menyaksikan perubahan dunia yang begitu dinamis, pikiran saya terbang melayang pada beberapa adegan bermakna dalam film biografi ulama nasional kita: <em>Sang Kyai</em> dan <em>Buya Hamka</em>. Dari kisah perjalanan dua tokoh besar bangsa ini, ada nilai-nilai esensial yang sangat relevan untuk diserap oleh kaum pendidik masa kini.
+            </p>
+
+            <h3>Menjadi Guru yang Adaptif</h3>
+            <p>
+                Dalam film <em>Sang Kyai</em>, terdapat sebuah adegan ketika para santri melaporkan situasi negara yang kian genting kepada K.H. Hasyim Asy'ari. Perang tak lagi terelakkan. Alhasil, beliau bersama para ulama mengeluarkan fatwa bahwa berperang demi mempertahankan kedaulatan negara hukumnya adalah wajib (*Resolusi Jihad*). 
+            </p>
+
+            <p>
+                Namun, ada momen menarik saat beliau sedang sendirian di kamar. K.H. Hasyim Asy'ari memegang sebuah pistol dan secara mandiri mempelajari cara menggunakannya. 
+            </p>
+
+            <p>
+                Pelajaran penting yang dapat dipetik dari sosok K.H. Hasyim Asy'ari dalam konteksnya sebagai pendidik adalah bahwa adaptasi terhadap tuntutan zaman merupakan suatu keharusan—tanpa sedikit pun mengorbankan nilai-nilai dan prinsip utama yang dipegang. Jika dahulu beliau berijtihad bahwa perang adalah kewajiban dan memilih belajar mengoperasikan senjata, maka guru masa kini perlu berijtihad bahwa perjuangan mencerdaskan anak bangsa memerlukan kolaborasi serta penguasaan teknologi. Pembelajaran hal-hal baru, baik *hard skills* maupun *soft skills*, menjadi krusial agar guru mampu menyelaraskan konteks pembelajaran dengan kebutuhan zaman peserta didik.
+            </p>
+
+            <!-- Academic Quote Block -->
+            <div class="academic-quote">
+                <p>"Kemandirian dan fleksibilitas beradaptasi adalah benteng utama pendidik agar tak tergilas zaman, tanpa pernah kehilangan marwah pengabdiannya."</p>
+            </div>
+
+            <h3>Menjadi Guru yang Mandiri</h3>
+            <p>
+                Sementara itu, dalam film <em>Buya Hamka</em> (2023), dikisahkan sebuah fase ketika Buya Hamka memilih berada di luar lingkaran pemerintahan dan mengabdi sebagai guru ngaji biasa di kampung. Suatu hari, di tengah kondisi ekonomi keluarga yang serba pas-pasan seusai memberikan khutbah di masjid, beberapa jamaah menghampiri beliau untuk memberikan imbalan atas ilmu yang telah disampaikan.
+            </p>
+
+            <p>
+                Yang amat menarik, Buya Hamka menolak amplop pemberian tersebut secara halus. Beliau justru menawarkan buku-buku karya tulisnya sebagai bentuk transaksi jual beli yang bermartabat.
+            </p>
+
+            <p>
+                Dari adegan ini, kita diajak bermuhasabah. Meskipun kesejahteraan dan profesionalisme guru memang sudah sepatutnya menjadi perhatian utama pemerintah, prinsip dasar pendidik sebagai insan pengabdi yang mencerdaskan bangsa harus tetap menjadi filosofi yang mengakar tegak. Keterbatasan tidak boleh mematikan langkah; kreativitas dan kemandirian inilah yang wajib dipelihara oleh seorang guru agar senantiasa berdaya.
+            </p>
+
+            <p>
+                Pada akhirnya, menjadi guru di era modern bukan sekadar menyampaikan materi pelajaran yang dengan mudah bisa dicari di internet. Menjadi guru adalah tentang bagaimana kita bersikap adaptif terhadap perubahan teknologi, namun tetap memegang teguh prinsip kemandirian dan integritas moral sebagaimana yang telah diteladankan oleh para pendahulu kita.
+            </p>
+        </article>
+
+        <!-- Footer Artikel / Tombol Kembali -->
+        <footer class="article-footer">
+            <a href="gagasan.html" class="btn-kembali">&larr; Kembali ke Gagasan &amp; Solusi</a>
+            <span style="font-size: 13px; color: #777;">Kategori: Refleksi / Keberdayaan / Guru</span>
+        </footer>
+
+    </main>
+
+    <!-- Footer Website -->
+    <footer class="footer">
+        <p>&copy; 2026 - Robby Sopyan, S.Pd., M.Pd. // Hak Cipta Dilindungi.</p>
+    </footer>
+
+    <!-- JavaScript Toggle Hamburger -->
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('nav-menu');
+
+        if(hamburger) {
+            hamburger.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+                hamburger.classList.toggle('active');
+            });
+        }
+    </script>
+</body>
+</html>
