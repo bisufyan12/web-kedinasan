@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Biar kebaca di WA/share link -->
+    <meta property="og:title" content="Fakultas Warung Kopi - Robby Sopyan" />
+    <meta property="og:description" content="Refleksi kritis tentang penyempitan esensi pendidikan, lunturnya idealisme di dunia kerja, dan warung kopi sebagai ruang kelas informal pembelajar realitas." />
+    <!-- Alamat Lengkap Gambar (Wajib Pakai URL Lengkap/Absolut) -->
+    <meta property="og:image" content="https://robbysopyan.my.id/sampul_fakultas_warkop.jpg" />
+    <meta property="og:url" content="https://robbysopyan.my.id/fakultas-warung-kopi.html" />
+    <meta property="og:type" content="article" />
+    <title>Fakultas Warung Kopi - Robby Sopyan</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Styling Khusus Artikel Akademis & Opini */
+        .article-container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .article-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .article-category {
+            display: inline-block;
+            background: #f39c12;
+            color: #fff;
+            padding: 4px 14px;
+            font-size: 12px;
+            font-weight: bold;
+            border-radius: 20px;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+
+        .article-title {
+            color: rgb(9, 9, 67);
+            font-size: 32px;
+            line-height: 1.3;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .article-meta {
+            font-size: 14px;
+            color: #666;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            border-top: 1px solid #eee;
+            border-bottom: 1px solid #eee;
+            padding: 10px 0;
+            margin-bottom: 30px;
+        }
+
+        /* Abstract / Ringkasan Eksekutif */
+        .article-abstract {
+            background-color: rgb(238, 236, 233);
+            border-left: 4px solid rgb(9, 9, 67);
+            padding: 20px;
+            border-radius: 0 8px 8px 0;
+            font-style: italic;
+            font-size: 15px;
+            color: #333;
+            line-height: 1.7;
+            margin-bottom: 30px;
+        }
+
+        /* Wrapper Foto & Caption */
+        .article-featured-wrapper {
+            margin: 0 0 30px 0;
+            padding: 0;
+        }
+
+        .article-featured-img {
+            width: 100%;
+            max-height: 420px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        .image-caption {
+            font-size: 13px;
+            color: #777;
+            text-align: center;
+            font-style: italic;
+        }
+
+        /* Isi Artikel Utama */
+        .article-body {
+            font-size: 17px;
+            line-height: 1.8;
+            color: #2c3e50;
+            text-align: justify;
+        }
+
+        .article-body p {
+            margin-bottom: 22px;
+        }
+
+        .article-body h3 {
+            color: rgb(9, 9, 67);
+            font-size: 22px;
+            margin: 35px 0 15px 0;
+            border-bottom: 2px solid #f39c12;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        /* Highlight Quote Akademis */
+        .academic-quote {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-left: 5px solid #f39c12;
+            padding: 20px 25px;
+            margin: 30px 0;
+            border-radius: 4px;
+        }
+
+        .academic-quote p {
+            font-size: 18px;
+            font-weight: 600;
+            color: rgb(9, 9, 67);
+            margin-bottom: 5px;
+            font-style: italic;
+        }
+
+        /* Footer & Navigasi Kembali */
+        .article-footer {
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .btn-kembali {
+            display: inline-block;
+            background: rgb(9, 9, 67);
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+
+        .btn-kembali:hover {
+            background: #f39c12;
+        }
+
+        @media screen and (max-width: 576px) {
+            .article-title {
+                font-size: 24px;
+            }
+            .article-meta {
+                flex-direction: column;
+                gap: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <header class="container-navbar">
+        <div class="navbar-judul">
+            <h2>Robby Sopyan</h2>
+            <h3>Pendidik &amp; Pegiat Numerasi</h3>
+        </div>
+
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <nav class="navbar-list" id="nav-menu">
+            <a href="index.html">Beranda</a>
+            <a href="jejak.html">Jejak Pengabdian</a>
+            <a href="gagasan.html" class="active">Gagasan &amp; Solusi</a>
+            <a href="tentang.html">Tentang</a>
+            <a href="https://wa.me/6281234567890" target="_blank" class="btn-sapa btn-sapa-mobile">Warga Menyapa</a>
+        </nav>
+
+        <div class="navbar-cta">
+            <a href="https://wa.me/6281234567890" target="_blank" class="btn-sapa">Warga Menyapa</a>
+        </div>
+    </header>
+
+    <!-- Main Article Layout -->
+    <main class="article-container">
+        
+        <header class="article-header">
+            <span class="article-category">Opini Pendidikan</span>
+            <h1 class="article-title">Fakultas Warung Kopi</h1>
+            
+            <div class="article-meta">
+                <span>Oleh: <strong>Robby Sopyan, S.Pd., M.Pd</strong></span>
+                <span>23 Agustus 2026</span>
+                <span>Waktu Baca: 3 Menit</span>
+            </div>
+        </header>
+
+        <!-- Abstract / Summary -->
+        <div class="article-abstract">
+            Pendidikan sejatinya dirancang untuk memberikan arah dan filosofi hidup. Namun ketika dalam praktiknya ia menyempit sekadar syarat formal pekerjaan dan ajang mencetak 'orang penting', idealisme di bangku kuliah kerap tumbang di hadapan realitas profesi. Benturan ironis yang tak pernah diajarkan silabus akademis ini justru tuntas dipelajari di meja-meja warung kopi.
+        </div>
+
+        <!-- Featured Image dengan Keterangan -->
+        <figure class="article-featured-wrapper">
+            <img src="sampul_fakultas_warkop.jpg" alt="Fakultas Warung Kopi" class="article-featured-img">
+            <figcaption class="image-caption">Diskusi informal di warung kopi sebagai ruang kelas kedua menelanjangi realitas profesi.</figcaption>
+        </figure>
+
+        <!-- Body Content -->
+        <article class="article-body">
+            <p>
+                Pendidikan sejatinya memberi arah dan kompas moral agar manusia tahu peran sosialnya di masyarakat. Namun dalam praktiknya, ia menyempit sekadar syarat formal pencari kerja—ijazah tinggi diidentikkan dengan kemudahan meraih jabatan, sementara ijazah rendah dipatok menjadi kuli. Kampus seolah memaksa tiap kelulusan untuk menjadi orang penting dan pejabat.
+            </p>
+
+            <h3>Idealisme yang Berhenti di Kelas</h3>
+            <p>
+                Di bangku kuliah, teori dan idealisme dirawat dengan gagah. Namun seusai lulus dan memasuki dunia kerja, realitas profesi sering kali menuntut kompromi. Demi karir atau tuntutan ekonomi, idealisme yang pernah dipegang teguh terpaksa dilepas satu per satu tepat di depan pintu kantor.
+            </p>
+
+            <!-- Academic Quote Block -->
+            <div class="academic-quote">
+                <p>"Warung kopi menjadi ruang kelas informal yang mengajarkan kita dua hal penting sekaligus: menelanjangi realitas tanpa ilusi, sekaligus menguji seberapa kuat integritas kita bertahan."</p>
+            </div>
+
+            <h3>Fakultas Warung Kopi</h3>
+            <p>
+                Uniknya, realitas ironis tentang bagaimana sebuah profesi sebenarnya berjalan—tentang kompromi-kompromi politik, negosiasi di balik layar, hingga 'aturan tak tertulis' di lapangan—justru jarang dibedah secara jujur di dalam ruang kuliah formal. Silabus akademis sering kali terlalu steril dari realitas yang kotor.
+            </p>
+
+            <p>
+                Pengetahuan tentang "dunia nyata" itu justru dipelajari di tempat lain: di meja-meja kayu warung kopi.
+            </p>
+
+            <p>
+                Di <em>Fakultas Warung Kopi</em> inilah, dalam kepulan asap rokok dan cangkir-cangkir hitam yang mulai dingin, kurikulum kehidupan yang sebenarnya dibahas. Di sinilah para alumni, senior, dan praktisi berbicara tanpa filter. Mereka membedah bagaimana teori di kampus kerap kali patah oleh benturan kepentingan, serta bagaimana nurani diuji saat berhadapan dengan kekuasaan.
+            </p>
+        </article>
+
+        <!-- Footer Artikel / Tombol Kembali -->
+        <footer class="article-footer">
+            <a href="gagasan.html" class="btn-kembali">&larr; Kembali</a>
+            <span style="font-size: 13px; color: #777;">Kategori: Opini Pendidikan</span>
+        </footer>
+
+    </main>
+
+    <!-- Footer Website -->
+    <footer class="footer">
+        <p>&copy; 2026 - Robby Sopyan // Hak Cipta Dilindungi.</p>
+    </footer>
+
+    <!-- JavaScript Toggle Hamburger -->
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('nav-menu');
+
+        if(hamburger) {
+            hamburger.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+                hamburger.classList.toggle('active');
+            });
+        }
+    </script>
+</body>
+</html>
