@@ -1,1 +1,345 @@
-Dahulu kaum Sofis dikritik karena mengomersilkan pengetahuan dan retorika demi materi. Hari ini, fenomena tersebut terulang kembali di ruang digital: media sosial dibanjiri figur yang tergesa-gesa angkat suara tanpa analisis mendalam, menggeser pencarian kebenaran menjadi sekadar perburuan traffic dan viral.
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gagasan &amp; Solusi - Robby Sopyan</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .page-header {
+            background-color: rgb(238, 236, 233);
+            padding: 40px 20px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .page-header h1 {
+            color: rgb(9, 9, 67);
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .page-header p {
+            color: #555;
+            font-size: 16px;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .container-gagasan {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        /* Filter Kategori Button */
+        .filter-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 35px;
+            flex-wrap: wrap;
+        }
+
+        .btn-filter {
+            background: #fff;
+            border: 1px solid rgb(9, 9, 67);
+            color: rgb(9, 9, 67);
+            padding: 8px 18px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .btn-filter.active, .btn-filter:hover {
+            background: rgb(9, 9, 67);
+            color: #fff;
+        }
+
+        /* Grid Kartu Gagasan */
+        .grid-gagasan {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card-gagasan {
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: all 0.3s ease;
+        }
+
+        /* Animasi saat kartu disembunyikan/ditampilkan */
+        .card-gagasan.hide {
+            display: none !important;
+        }
+
+        .card-img-box {
+            position: relative;
+            height: 200px;
+        }
+
+        .card-img-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .badge-kategori {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: #f39c12;
+            color: #fff;
+            padding: 4px 12px;
+            font-size: 12px;
+            font-weight: bold;
+            border-radius: 4px;
+            text-transform: uppercase;
+        }
+
+        .card-content {
+            padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-tanggal {
+            font-size: 13px;
+            color: #888;
+            margin-bottom: 8px;
+        }
+
+        .card-title {
+            color: rgb(9, 9, 67);
+            font-size: 18px;
+            margin-bottom: 10px;
+            line-height: 1.4;
+        }
+
+        .card-snippet {
+            font-size: 14px;
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+
+        .btn-baca {
+            background: rgb(9, 9, 67);
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+            width: 100%;
+            text-align: center;
+            text-decoration: none;
+            display: block;
+        }
+
+        .btn-baca:hover {
+            background: #f39c12;
+        }
+
+        @media screen and (max-width: 576px) {
+            .grid-gagasan {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <header class="container-navbar">
+        <div class="navbar-judul">
+            <h2>Robby Sopyan</h2>
+            <h3>Pendidik &amp; Pegiat Numerasi</h3>
+        </div>
+
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <nav class="navbar-list" id="nav-menu">
+            <a href="index.html">Beranda</a>
+            <a href="jejak.html">Jejak Pengabdian</a>
+            <a href="gagasan.html">Gagasan &amp; Solusi</a>
+            <a href="tentang.html">Tentang</a>
+            <!-- Tombol Sapa Warga dimasukkan ke dalam menu agar tampil rapi di HP -->
+            <a href="https://wa.me/628561166774?text=Halo%20Pak%20Robby%2C%20saya%20ingin%20menyapa%20dan%20berdiskusi" 
+               target="_blank" class="btn-sapa btn-sapa-mobile">Warga Menyapa</a>
+        </nav>
+
+        <div class="navbar-cta">
+            <a href="https://wa.me/628561166774?text=Halo%20Pak%20Robby%2C%20saya%20ingin%20menyapa%20dan%20berdiskusi" 
+               target="_blank" class="btn-sapa">Warga Menyapa</a>
+        </div>
+    </header>
+
+    <!-- Header Halaman -->
+    <section class="page-header">
+        <h1>Gagasan &amp; Solusi</h1>
+        <p>Himpunan Opini Pendidikan, Refleksi Pembelajaran, Hasil Riset Akademis, serta catatan lainnya.</p>
+    </section>
+
+    <!-- Konten Utama -->
+    <main class="container-gagasan">
+
+        <!-- Tombol Filter dengan atribut data-filter -->
+        <div class="filter-container">
+            <button class="btn-filter active" data-filter="all">Semua Tulisan</button>
+            <button class="btn-filter" data-filter="opini">Opini Pendidikan</button>
+            <button class="btn-filter" data-filter="riset">Riset &amp; Akademis</button>
+            <button class="btn-filter" data-filter="refleksi">Refleksi Guru</button>
+            <button class="btn-filter" data-filter="kemasyarakatan">Kemasyarakatan</button>
+        </div>
+
+        <!-- Grid Kartu Artikel dengan atribut data-category -->
+        <div class="grid-gagasan">
+
+            <!-- Artikel 6 -->
+            <article class="card-gagasan" data-category="kemasyarakatan">
+                <div class="card-img-box">
+                    <span class="badge-kategori">Kemasyarakatan</span>
+                    <img src="kaum-sofis.jpg" alt="image">
+                </div>
+                <div class="card-content">
+                    <p class="card-tanggal">24 September 2026</p>
+                    <h3 class="card-title">Kaum Sofis Masa Kini</h3>
+                    <p class="card-snippet">Dahulu kaum Sofis dikritik karena mengomersilkan pengetahuan dan retorika demi materi. Hari ini, fenomena tersebut terulang kembali di ruang digital: media sosial dibanjiri figur yang tergesa-gesa angkat suara tanpa analisis mendalam, menggeser pencarian kebenaran menjadi sekadar perburuan traffic dan viral. </p>
+                   <a href="garis-offside-kritik-publik.html" class="btn-baca">Baca Selengkapnya</a>
+                </div>
+            </article>
+
+            <!-- Artikel 5 -->
+            <article class="card-gagasan" data-category="kemasyarakatan">
+                <div class="card-img-box">
+                    <span class="badge-kategori">Kemasyarakatan</span>
+                    <img src="Why a possession-based game works.jpeg" alt="image">
+                </div>
+                <div class="card-content">
+                    <p class="card-tanggal">30 Agustus 2026</p>
+                    <h3 class="card-title">Garis Offside Kritik Publik</h3>
+                    <p class="card-snippet">Transformasi digital telah mengubah media sosial menjadi kekuatan kontrol sosial yang masif. Namun, ketika kritik publik bergeser dari semangat perbaikan kebijakan menjadi industri konten demi mengejar traffic dan viral, di situlah garis offside demarkasi demokrasi mulai kabur. </p>
+                   <a href="garis-offside-kritik-publik.html" class="btn-baca">Baca Selengkapnya</a>
+                </div>
+            </article>
+            
+            <!-- Artikel 4 -->
+            <article class="card-gagasan" data-category="opini">
+                <div class="card-img-box">
+                    <span class="badge-kategori">Opini Pendidikan</span>
+                    <img src="sampul_fakultas_warkop.jpg" alt="image">
+                </div>
+                <div class="card-content">
+                    <p class="card-tanggal">23 Agustus 2026</p>
+                    <h3 class="card-title">Fakultas Warung Kopi</h3>
+                    <p class="card-snippet">Pendidikan sejatinya dirancang untuk memberikan arah dan filosofi hidup. Namun ketika dalam praktiknya ia menyempit sekadar syarat formal pekerjaan dan ajang mencetak 'orang penting', idealisme di bangku kuliah kerap tumbang di hadapan realitas profesi. Benturan ironis yang tak pernah diajarkan silabus akademis ini justru tuntas dipelajari di meja-meja warung kopi.</p>
+                    <a href="fakultas-warung-kopi.html" class="btn-baca">Baca Selengkapnya</a>
+                </div>
+            </article>
+
+            <!-- Artikel 3 -->
+            <article class="card-gagasan" data-category="opini">
+                <div class="card-img-box">
+                    <span class="badge-kategori">Opini Pendidikan</span>
+                    <img src="sampul_pendidikan_kemerdekaan.jpg" alt="image">
+                </div>
+                <div class="card-content">
+                    <p class="card-tanggal">18 Agustus 2026</p>
+                    <h3 class="card-title">Pendidikan dan Jalan Kemerdekaan</h3>
+                    <p class="card-snippet">Memperingati HUT Kemerdekaan RI ke-81 membawa kita pada refleksi mendasar mengenai relasi pendidikan dan kemerdekaan. Berbagai persoalan bangsa hari ini—mulai dari kemiskinan, pengangguran, hingga lunturnya komitmen moral para oknum pengambil kebijakan—menunjukkan bahwa kemerdekaan sejati hanya dapat diraih bila pendidikan berhasil merasuk pada prinsip dan filosofi hidup setiap anak bangsa.</p>
+                    <a href="pendidikan-dan-kemerdekaan.html" class="btn-baca">Baca Selengkapnya</a>
+                </div>
+            </article>
+
+            <!-- Artikel 2 -->
+            <article class="card-gagasan" data-category="refleksi">
+                <div class="card-img-box">
+                    <span class="badge-kategori">Refleksi Guru</span>
+                    <img src="Buya Hamka, ulama Minang, dari Sumatra Barat.jpeg" alt="Optimalisasi Riset Kolaboratif">
+                </div>
+                <div class="card-content">
+                    <p class="card-tanggal">9 Agustus 2026</p>
+                    <h3 class="card-title">Menjadi Guru Mandiri dan Adaptif: Pelajaran dari Film Buya Hamka dan Sang Kyai</h3>
+                    <p class="card-snippet">Laju pesat era digital dan kecerdasan buatan menuntut reorientasi peran pendidik di ruang kelas. Melalui rekaman sejarah yang divisualisasikan dalam film 'Buya Hamka' dan 'Sang Kyai' tulisan ini merefleksikan pentingnya sikap adaptif terhadap perkembangan zaman serta kemandirian filosofis yang harus dimiliki oleh seorang guru.</p>
+                    <a href="menajadi-guru-mandiri-dan-adaptif.html" class="btn-baca">Baca Selengkapnya</a>
+                </div>
+            </article>
+
+            <!-- Artikel 1: Kategori Refleksi Guru -->
+            <article class="card-gagasan" data-category="refleksi">
+                <div class="card-img-box">
+                    <span class="badge-kategori">Refleksi Guru</span>
+                    <img src="ilustrasi-rama.jpg" alt="gambar">
+                </div>
+                <div class="card-content">
+                    <p class="card-tanggal">04 Agustus 2026</p>
+                    <h3 class="card-title">Kisah Rama, Siswa SMA yang Kehilangan Orang Tuanya Sejak Usia 2 Bulan</h1></h3>
+                    <p class="card-snippet">Di balik sosok seorang remaja di ruang kelas, sering kali ada cerita perjuangan hidup yang tak pernah kita bayangkan. Sebuah kisah tentang Rama, anak yang harus melangkah dalam kesendirian, berteman keterbatasan, dan belajar dewasa jauh sebelum waktunya.</p>
+                    <a href="rama.html" class="btn-baca">Baca Selengkapnya</a>
+                </div>
+            </article>
+
+            
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 - Robby Sopyan // Hak Cipta Dilindungi.</p>
+    </footer>
+
+    <!-- Script JavaScript Filter Interaktif -->
+    <script>
+        // Toggle Hamburger Menu
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('nav-menu');
+
+        if(hamburger) {
+            hamburger.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+                hamburger.classList.toggle('active');
+            });
+        }
+
+        // Logic Filter Kategori Interaktif
+        const filterBtns = document.querySelectorAll('.btn-filter');
+        const cards = document.querySelectorAll('.card-gagasan');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // 1. Ubah status tombol aktif
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                // 2. Filter Kartu Artikel
+                const filterValue = btn.getAttribute('data-filter');
+
+                cards.forEach(card => {
+                    const category = card.getAttribute('data-category');
+
+                    if (filterValue === 'all' || filterValue === category) {
+                        card.classList.remove('hide');
+                    } else {
+                        card.classList.add('hide');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
