@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Biar kebaca di WA/share link -->
+    <meta property="og:title" content="Kaum Sofis Masa Kini - Robby Sopyan" />
+    <meta property="og:description" content="Sebuah review lahirnya kaum Sofis di ruang digital: ketika pengetahuan dan artikulasi publik bergeser dari pencarian kebenaran menjadi komoditas komersial." />
+    <!-- Alamat Lengkap Gambar (Wajib Pakai URL Lengkap/Absolut) -->
+    <meta property="og:image" content="https://robbysopyan.my.id/kaum-sofis.jpg" />
+    <meta property="og:url" content="https://robbysopyan.my.id/kaum-sofis.html" />
+    <meta property="og:type" content="article" />
+    <title>Kaum Sofis Masa Kini - Robby Sopyan</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Styling Khusus Artikel Akademis & Opini */
+        .article-container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .article-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .article-category {
+            display: inline-block;
+            background: #f39c12;
+            color: #fff;
+            padding: 4px 14px;
+            font-size: 12px;
+            font-weight: bold;
+            border-radius: 20px;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+
+        .article-title {
+            color: rgb(9, 9, 67);
+            font-size: 32px;
+            line-height: 1.3;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .article-meta {
+            font-size: 14px;
+            color: #666;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            border-top: 1px solid #eee;
+            border-bottom: 1px solid #eee;
+            padding: 10px 0;
+            margin-bottom: 30px;
+        }
+
+        /* Abstract / Ringkasan Eksekutif */
+        .article-abstract {
+            background-color: rgb(238, 236, 233);
+            border-left: 4px solid rgb(9, 9, 67);
+            padding: 20px;
+            border-radius: 0 8px 8px 0;
+            font-style: italic;
+            font-size: 15px;
+            color: #333;
+            line-height: 1.7;
+            margin-bottom: 30px;
+        }
+
+        /* Wrapper Foto & Caption */
+        .article-featured-wrapper {
+            margin: 0 0 30px 0;
+            padding: 0;
+        }
+
+        .article-featured-img {
+            width: 100%;
+            max-height: 420px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        .image-caption {
+            font-size: 13px;
+            color: #777;
+            text-align: center;
+            font-style: italic;
+        }
+
+        /* Isi Artikel Utama */
+        .article-body {
+            font-size: 17px;
+            line-height: 1.8;
+            color: #2c3e50;
+            text-align: justify;
+        }
+
+        .article-body p {
+            margin-bottom: 22px;
+        }
+
+        .article-body h3 {
+            color: rgb(9, 9, 67);
+            font-size: 22px;
+            margin: 35px 0 15px 0;
+            border-bottom: 2px solid #f39c12;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        /* Highlight Quote Akademis */
+        .academic-quote {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-left: 5px solid #f39c12;
+            padding: 20px 25px;
+            margin: 30px 0;
+            border-radius: 4px;
+        }
+
+        .academic-quote p {
+            font-size: 18px;
+            font-weight: 600;
+            color: rgb(9, 9, 67);
+            margin-bottom: 5px;
+            font-style: italic;
+        }
+
+        /* Footer & Navigasi Kembali */
+        .article-footer {
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .btn-kembali {
+            display: inline-block;
+            background: rgb(9, 9, 67);
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+
+        .btn-kembali:hover {
+            background: #f39c12;
+        }
+
+        @media screen and (max-width: 576px) {
+            .article-title {
+                font-size: 24px;
+            }
+            .article-meta {
+                flex-direction: column;
+                gap: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <header class="container-navbar">
+        <div class="navbar-judul">
+            <h2>Robby Sopyan</h2>
+            <h3>Pendidik &amp; Pegiat Numerasi</h3>
+        </div>
+
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <nav class="navbar-list" id="nav-menu">
+            <a href="index.html">Beranda</a>
+            <a href="jejak.html">Jejak Pengabdian</a>
+            <a href="gagasan.html" class="active">Gagasan &amp; Solusi</a>
+            <a href="tentang.html">Tentang</a>
+            <a href="https://wa.me/6281234567890" target="_blank" class="btn-sapa btn-sapa-mobile">Warga Menyapa</a>
+        </nav>
+
+        <div class="navbar-cta">
+            <a href="https://wa.me/6281234567890" target="_blank" class="btn-sapa">Warga Menyapa</a>
+        </div>
+    </header>
+
+    <!-- Main Article Layout -->
+    <main class="article-container">
+        
+        <header class="article-header">
+            <span class="article-category">Kemasyarakatan</span>
+            <h1 class="article-title">Kaum Sofis Masa Kini</h1>
+            
+            <div class="article-meta">
+                <span>Oleh: <strong>Robby Sopyan, S.Pd., M.Pd</strong></span>
+                <span>24 September 2026</span>
+                <span>Waktu Baca: 3 Menit</span>
+            </div>
+        </header>
+
+        <!-- Abstract / Summary -->
+        <div class="article-abstract">
+            Dahulu kaum Sofis dikritik karena mengomersilkan pengetahuan dan retorika demi materi. Hari ini, fenomena tersebut terulang kembali di ruang digital: media sosial dibanjiri figur yang tergesa-gesa angkat suara tanpa analisis mendalam, menggeser pencarian kebenaran menjadi sekadar perburuan traffic dan viral.
+        </div>
+
+        <!-- Featured Image dengan Keterangan -->
+        <figure class="article-featured-wrapper">
+            <img src="kaum-sofis.jpg" alt="Kaum Sofis Masa Kini" class="article-featured-img">
+            <figcaption class="image-caption">Sumber: https://www.bbc.com/indonesia/vert-fut-58866944 </figcaption>
+        </figure>
+
+        <!-- Body Content -->
+        <article class="article-body">
+            <p>
+                Dalam sejarah filsafat Yunani Kuno, kita mengenal sekelompok orang yang dinamakan kaum Sofis. Secara harfiah, kata <em>sofis</em> berkaitan dengan kebijaksanaan. Mereka adalah deretan figur yang berwawasan luas, mahir berorasi, dan punya pengetahuan mendalam. Namun, praktik mereka memicu kritik keras dari para pemikir seperti Socrates dan Plato. Kebijaksanaan yang mereka miliki justru dikomersilkan—dijual demi mengejar imbalan materi dan popularitas.
+            </p>
+
+            <h3>Antara Kebijaksanaan dan Komersialisasi</h3>
+            <p>
+                Kaum Sofis zaman dulu pandai memikat audiens dengan kepiawaian bertutur kata, meski argumen yang disampaikan belum tentu berorientasi pada kebenaran sejati. Pengetahuan yang mestinya dipakai untuk memperjelas realitas dan mengedukasi masyarakat, malah bergeser menjadi sekadar alat mata pencaharian.
+            </p>
+
+            <!-- Academic Quote Block -->
+            <div class="academic-quote">
+                <p>"Di tengah riuhnya suara para Sofis masa kini, tantangan terbesar kita adalah tetap jeli mendengarkan: mana suara yang benar-benar membawa kebijaksanaan, dan mana yang sekadar jualan kehebohan."</p>
+            </div>
+
+            <h3>Kaum Sofis di Ruang Digital</h3>
+            <p>
+                Hari ini, fenomena ribuan tahun lalu itu terulang kembali di panggung yang berbeda. Ruang publik kita—khususnya media sosial—mulai dibanjiri oleh kaum Sofis masa kini.
+            </p>
+
+            <p>
+                Bedanya, imbalan yang dikejar hari ini bukan lagi koin emas, melainkan <em>traffic</em>, jumlah pengikut, hingga pundi-pundi <em>adsense</em>. Media sosial penuh dengan figur yang tergesa-gesa angkat suara atas setiap isu yang sedang hangat, tanpa analisis yang tajam apalagi kajian yang mendalam.
+            </p>
+
+            <p>
+                Bentuknya makin beragam: mulai dari permainan judul (<em>headline</em>) yang bombastis, opini instan, hingga narasi yang sengaja diproduksi untuk memancing emosi warganet. Pengetahuan tak lagi diposisikan untuk mencari kebenaran, melainkan sebatas komoditas demi mempertahankan atensi publik.
+            </p>
+        </article>
+
+        <!-- Footer Artikel / Tombol Kembali -->
+        <footer class="article-footer">
+            <a href="gagasan.html" class="btn-kembali">Kembali</a>
+            <span style="font-size: 13px; color: #777;">Kategori: Kemasyarakatan</span>
+        </footer>
+
+    </main>
+
+    <!-- Footer Website -->
+    <footer class="footer">
+        <p>&copy; 2026 - Robby Sopyan // Hak Cipta Dilindungi.</p>
+    </footer>
+
+    <!-- JavaScript Toggle Hamburger -->
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('nav-menu');
+
+        if(hamburger) {
+            hamburger.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+                hamburger.classList.toggle('active');
+            });
+        }
+    </script>
+</body>
+</html>
